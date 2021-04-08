@@ -2,10 +2,8 @@
 
 namespace Dcolsay\DataSource\File;
 
-
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-
 
 class FileDataSourceServiceProvider extends PackageServiceProvider
 {
