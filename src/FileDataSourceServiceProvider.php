@@ -2,8 +2,10 @@
 
 namespace Dcolsay\DataSource\File;
 
+use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Dcolsay\DataSource\File\Http\Livewire\SourcesTableView;
 
 class FileDataSourceServiceProvider extends PackageServiceProvider
 {
@@ -16,7 +18,8 @@ class FileDataSourceServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package) : void
     {
         $package
-            ->name('file-datasource');
+            ->name('file-datasource')
+            ->hasViews();
     }
 
     public function registeringPackage()
@@ -36,6 +39,6 @@ class FileDataSourceServiceProvider extends PackageServiceProvider
 
     public function packageBooted()
     {
-      
+        Livewire::component('sources-table', SourcesTableView::class);
     }
 }
