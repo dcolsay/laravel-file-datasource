@@ -12,10 +12,23 @@
             "Dcolsay\\DataSource\\File\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Dcolsay\\DataSource\\File\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/testbench.bat package:test"
+    },
     "require": {
         "php": "^7.4|^8.0",
         "spatie/laravel-package-tools": "^1.6",
         "illuminate/contracts": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.17",
+        "phpunit/phpunit": "^9.4",
+        "nunomaduro/collision": "^5.3"
     },
     "extra": {
         "laravel": {
