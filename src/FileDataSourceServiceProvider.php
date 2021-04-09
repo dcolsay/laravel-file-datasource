@@ -5,6 +5,7 @@ namespace Dcolsay\DataSource\File;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Dcolsay\DataSource\File\Actions\Sources\NewScanSource;
 use Dcolsay\DataSource\File\Http\Livewire\SourcesTableView;
 
 class FileDataSourceServiceProvider extends PackageServiceProvider
@@ -24,7 +25,7 @@ class FileDataSourceServiceProvider extends PackageServiceProvider
 
     public function registeringPackage()
     {
-        
+        FileDataSource::scanSourceUsing(NewScanSource::class);
     }
 
     public function packageRegistered()
